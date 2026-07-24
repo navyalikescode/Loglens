@@ -1,0 +1,8 @@
+LAST SEEN   TYPE      REASON       OBJECT                        MESSAGE
+5m          Warning   BackOff      pod/checkout-7f8b9c6d-xk2jq   Back-off restarting failed container
+4m          Warning   Unhealthy    pod/api-6d9f7c8b5-kl4m        Readiness probe failed: Get "http://10.244.1.7:8080/ready": context deadline exceeded
+3m          Normal    Pulled       pod/checkout-7f8b9c6d-xk2jq   Successfully pulled image "registry.example/app:v2.4.1"
+3m          Warning   FailedMount  pod/batch-job-hn9wk           MountVolume.SetUp failed for volume PVC: persistentvolumeclaim "data" not found
+2m          Warning   OOMKilling   pod/worker-daemonset-mz81       Memory cgroup out of memory: Kill process 9912 (java)
+90s         Normal    ScalingReplicaSet deployment/api   Scaled up replica set api-6d9f7c8b5 from 3 to 5
+60s         Warning   Failed       pod/migrate-job-f9qp            Error: Job reached backoff limit

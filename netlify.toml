@@ -1,0 +1,18 @@
+# https://docs.netlify.com/build/configure-builds/file-based-configuration/
+#
+# Production: in Netlify → Site → Environment variables, set VITE_API_URL to your
+# Railway API base URL (no trailing slash), e.g. https://loglens-api.up.railway.app
+# Then trigger a new deploy so Vite bakes the value into the static bundle.
+[build]
+  base = "frontend"
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# SPA: send all paths to the built app (Vite)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

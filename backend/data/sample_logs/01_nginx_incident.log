@@ -1,0 +1,25 @@
+127.0.0.1 - - [15/Jan/2024:14:00:05 +0000] "GET /health HTTP/1.1" 200 42 "-" "curl/8.0" rt=0.012
+127.0.0.1 - - [15/Jan/2024:14:00:12 +0000] "GET /api/catalog HTTP/1.1" 200 8192 "-" "Mozilla/5.0" rt=0.045
+203.0.113.10 - - [15/Jan/2024:14:00:18 +0000] "GET /static/app.js HTTP/1.1" 200 120400 "-" "Mozilla/5.0" rt=0.033
+127.0.0.1 - - [15/Jan/2024:14:01:02 +0000] "POST /api/cart HTTP/1.1" 200 64 "-" "Mozilla/5.0" rt=0.089
+198.51.100.7 - - [15/Jan/2024:14:01:30 +0000] "GET /api/recommendations HTTP/1.1" 200 4096 "-" "Mozilla/5.0" rt=0.120
+127.0.0.1 - - [15/Jan/2024:14:02:11 +0000] "GET /health HTTP/1.1" 200 42 "-" "curl/8.0" rt=0.011
+127.0.0.1 - - [15/Jan/2024:14:02:55 +0000] "GET /api/catalog?page=2 HTTP/1.1" 200 6200 "-" "Mozilla/5.0" rt=0.052
+203.0.113.44 - - [15/Jan/2024:14:03:10 +0000] "GET /admin HTTP/1.1" 403 120 "-" "Mozilla/5.0" rt=0.008
+198.51.100.99 - - [15/Jan/2024:14:03:22 +0000] "GET /wp-login.php HTTP/1.1" 404 162 "-" "scanner/1.0" rt=0.004
+2024/01/15 14:04:01 [warn] 1024#1024: *8811 an upstream response is buffered to a temporary file
+2024/01/15 14:04:15 [error] 1024#1024: *8820 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: api.internal, request: "GET /api/checkout HTTP/1.1"
+127.0.0.1 - - [15/Jan/2024:14:05:01 +0000] "GET /api/checkout HTTP/1.1" 502 157 "-" "Mozilla/5.0" rt=30.001
+127.0.0.1 - - [15/Jan/2024:14:05:01 +0000] "POST /api/orders HTTP/1.1" 503 99 "-" "Mozilla/5.0" rt=30.002
+127.0.0.1 - - [15/Jan/2024:14:05:02 +0000] "GET /api/payments HTTP/1.1" 502 157 "-" "Mozilla/5.0" rt=29.500
+203.0.113.10 - - [15/Jan/2024:14:05:03 +0000] "GET /api/checkout HTTP/1.1" 502 157 "-" "Mozilla/5.0" rt=30.010
+127.0.0.1 - - [15/Jan/2024:14:05:04 +0000] "GET /api/profile HTTP/1.1" 503 99 "-" "curl/8.0" rt=28.900
+127.0.0.1 - - [15/Jan/2024:14:05:10 +0000] "GET /api/checkout HTTP/1.1" 502 157 "-" "Mozilla/5.0" rt=30.050
+2024/01/15 14:05:11 [error] 1024#1024: *8901 upstream prematurely closed connection while reading response header from upstream
+127.0.0.1 - - [15/Jan/2024:14:06:20 +0000] "GET /api/report/export HTTP/1.1" 200 5242880 "-" "Mozilla/5.0" rt=12.450
+127.0.0.1 - - [15/Jan/2024:14:06:35 +0000] "GET /api/report/export HTTP/1.1" 200 5242880 "-" "Mozilla/5.0" rt=11.980
+127.0.0.1 - - [15/Jan/2024:14:14:02 +0000] "GET /health HTTP/1.1" 200 42 "-" "curl/8.0" rt=0.010
+127.0.0.1 - - [15/Jan/2024:14:14:05 +0000] "GET /api/catalog HTTP/1.1" 200 8192 "-" "Mozilla/5.0" rt=0.040
+127.0.0.1 - - [15/Jan/2024:14:15:12 +0000] "GET /api/checkout HTTP/1.1" 200 128 "-" "Mozilla/5.0" rt=0.220
+203.0.113.10 - - [15/Jan/2024:14:15:30 +0000] "POST /api/orders HTTP/1.1" 201 96 "-" "Mozilla/5.0" rt=0.180
+127.0.0.1 - - [15/Jan/2024:14:16:01 +0000] "GET /health HTTP/1.1" 200 42 "-" "curl/8.0" rt=0.011

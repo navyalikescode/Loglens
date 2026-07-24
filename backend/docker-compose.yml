@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  phoenix:
+    image: arizephoenix/phoenix:latest
+    ports:
+      - "6006:6006"
+    restart: unless-stopped
+
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    env_file:
+      - ./.env
+    environment:
+      PHOENIX_OTLP_ENDPOINT: http://phoenix:6006/v1/traces
+    depends_on:
+      - phoenix
+    restart: unless-stopped

@@ -1,0 +1,11 @@
+Jan 15 14:00:05 prod-edge-01 systemd[1]: Started nginx.service - A high performance web server.
+Jan 15 14:00:06 prod-edge-01 nginx[1842]: worker process 1843 exited with code 0
+Jan 15 14:01:22 prod-edge-01 sshd[2101]: Failed password for invalid user admin from 203.0.113.50 port 59222 ssh2
+Jan 15 14:02:10 prod-db-02 postgresql[8831]: ERROR: deadlock detected
+Jan 15 14:02:10 prod-db-02 postgresql[8831]: DETAIL: Process 8831 waits for ShareLock on transaction 99102
+Jan 15 14:03:44 prod-edge-01 nginx[1842]: ERROR upstream timed out while reading response header from upstream
+Jan 15 14:04:01 prod-kubelet kubelet[1205]: WARN: pod sandbox changed; recreating pod networking
+Jan 15 14:05:12 prod-edge-01 kernel: Out of memory: Kill process 9021 (node) score 899 or sacrifice child
+Jan 15 14:05:13 prod-edge-01 systemd[1]: oomkill.target: Unit entered failed state.
+Jan 15 14:06:00 prod-edge-01 nginx[1842]: started worker process 1901
+<3>mysqld: ready for connections

@@ -1,0 +1,22 @@
+2024-01-15 14:00:01,120 INFO     uvicorn.error: Application startup complete.
+2024-01-15 14:00:02,340 INFO     app.middleware:request_id=8f3a trace started
+INFO:     127.0.0.1:49812 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49820 - "GET /api/v1/users/me HTTP/1.1" 200 OK
+2024-01-15 14:01:10,005 WARNING  app.db:request_id=8f40 slow query 1.2s on table orders
+INFO:     127.0.0.1:50102 - "POST /api/v1/checkout HTTP/1.1" 500 Internal Server Error
+2024-01-15 14:01:11,880 ERROR    app.checkout:request_id=8f40 Payment provider timeout after 30s
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/app/app/routes/checkout.py", line 88, in submit_order
+    charge = await payments.charge(payload)
+  File "/app/app/payments.py", line 42, in charge
+    raise ProviderTimeout("stripe connect hung")
+ProviderTimeout: stripe connect hung
+2024-01-15 14:01:12,102 ERROR    uvicorn.error: connection reset by peer on worker 3
+INFO:     127.0.0.1:50144 - "POST /api/v1/checkout HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:50150 - "GET /api/v1/cart HTTP/1.1" 502 Bad Gateway
+2024-01-15 14:02:00,000 INFO     app.worker:retry job email-send id=9921
+2024-01-15 14:02:33,441 ERROR    celery.task:task email-send failed: Redis connection refused
+INFO:     127.0.0.1:50401 - "GET /ready HTTP/1.1" 503 Service Unavailable
+INFO:     127.0.0.1:50402 - "GET /health HTTP/1.1" 200 OK
+2024-01-15 14:03:01,000 INFO     app.main:recovered payment circuit half-open

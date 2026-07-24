@@ -1,0 +1,33 @@
+LogLens sample logs — how to use
+================================
+
+Upload each file separately. Auto-detection looks at only the first ~20 lines,
+so a single file should be mostly one format; otherwise the wrong parser may win.
+
+01_nginx_incident.log
+  Nginx combined access + error lines. Status spread (2xx/4xx/5xx), optional rt= latency,
+  good timestamps for timeline + anomaly paths (bursts, silence gap, latency spread).
+
+02_python_uvicorn_incident.log
+  Standard logging, uvicorn-style lines, HTTP 5xx, and a merged traceback block.
+
+03_docker_incident.log
+  Docker RFC3339 (stdout/stderr F) lines + pipe-style container logs.
+
+04_kubernetes_events.log
+  kubectl get events-style header + Warning/Normal rows (BackOff, FailedMount, …).
+
+05_systemd_journal.log
+  syslog timestamps + nginx/sshd/postgresql units; includes priority-prefix lines.
+
+06_generic_fallback.log
+  No dedicated parser match — exercises the generic timestamp/keyword fallback.
+
+Stress / volume
+===============
+Generate a large nginx access log (default 25k lines, ~40+ minute span, error bursts,
+latency outliers, silence gap):
+
+  cd backend && uv run python data/sample_logs/generate_large_nginx.py -o data/sample_logs/nginx_stress_large.log --lines 25000
+
+Adjust --lines up to ~100k to stress the pipeline as claimed.

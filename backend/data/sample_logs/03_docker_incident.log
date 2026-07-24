@@ -1,0 +1,12 @@
+2024-01-15T14:00:00.123456789Z stdout F {"msg":"starting","version":"2.4.1"}
+2024-01-15T14:00:05.234567890Z stdout F listening on :8080
+2024-01-15T14:01:10.345678901Z stderr F WARN: connection pool 80% utilized
+2024-01-15T14:01:45.456789012Z stderr F ERROR: failed to reach redis at redis:6379: Connection refused
+2024-01-15T14:01:46.567890123Z stderr F ERROR: session store degraded; falling back to memory
+payment-api | 2024-01-15 14:02:00 ERROR circuit breaker OPEN for downstream inventory
+payment-api | 2024-01-15 14:02:01 ERROR timeout calling inventory: context deadline exceeded
+2024-01-15T14:02:15.678901234Z stderr F panic: runtime error: invalid memory address or nil pointer dereference
+2024-01-15T14:02:15.789012345Z stderr F goroutine 412 [running]:
+2024-01-15T14:02:15.890123456Z stderr F main.handleWebhook(0xc0004e2000)
+2024-01-15T14:03:00.901234567Z stdout F rolling restart initiated by orchestrator
+checkout-worker | 2024-01-15 14:03:30 INFO drained queue depth=0

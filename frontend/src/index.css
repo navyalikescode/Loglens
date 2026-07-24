@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ll-bg: 10 10 10;
+  --ll-surface: 20 20 20;
+  --ll-text: 255 255 255;
+  --ll-muted: 136 136 136;
+  --ll-accent: 0 255 136;
+  --ll-danger: 255 68 68;
+  --ll-warn: 255 170 0;
+  --ll-border: 255 255 255;
+  --ll-card: 0 0 0;
+  --ll-input: 0 0 0;
+  --ll-chart-grid: #333;
+  --ll-chart-tooltip-bg: #111;
+  --ll-chart-tooltip-border: #333;
+}
+
+[data-theme="light"] {
+  --ll-bg: 245 247 250;
+  --ll-surface: 255 255 255;
+  --ll-text: 15 23 42;
+  --ll-muted: 100 116 139;
+  --ll-accent: 5 150 105;
+  --ll-danger: 220 38 38;
+  --ll-warn: 202 138 4;
+  --ll-border: 0 0 0;
+  --ll-card: 255 255 255;
+  --ll-input: 248 250 252;
+  --ll-chart-grid: #e2e8f0;
+  --ll-chart-tooltip-bg: #ffffff;
+  --ll-chart-tooltip-border: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: rgb(var(--ll-bg));
+  color: rgb(var(--ll-text));
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgb(var(--ll-muted) / 0.3);
+  border-radius: 3px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--ll-muted) / 0.5);
+}

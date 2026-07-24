@@ -1,0 +1,6 @@
+2024-01-15 14:00:00 noise line without known format markers but with a timestamp for generic parse
+2024/01/15 14:00:15 alternate date style burst of keywords error timeout
+2024-01-15 14:01:00 still running job-4421 correlation=aaabbbccc
+custom-app | level=ERROR | shard=7 | duplicate key violates unique constraint "users_email_key"
+2024-01-15 14:02:00 another line CRITICAL disk full on /var
+legacy-binary[pid=991]: fatal: assertion failed at net.c:442
